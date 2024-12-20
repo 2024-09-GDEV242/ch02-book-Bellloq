@@ -21,10 +21,13 @@ class Book
         author = bookAuthor;
         title = bookTitle;
     }
-    public void printAuthor(String author) {
+    public String getAuthor() { return author; }
+    public String getTitle() { return title; } 
+    
+    public void printAuthor() {
         System.out.println(author);
     }
-    public void printTitle(String title) {
+    public void printTitle() {
         System.out.println(title);
     }
     // Add the methods here ...
