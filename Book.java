@@ -30,7 +30,9 @@ class Book
     public int getPages () { return pages; } 
     public String getRefNumber() { return refNumber; }
     
-    public void setRefNumber(String def) { refNumber = def;}
+    public void setRefNumber(String def) { 
+        if(def.length() > 3) refNumber = def;
+    }
     
     
     public void printAuthor() {
@@ -43,6 +45,8 @@ class Book
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
         System.out.println("Pages: " + pages);
+        if(refNumber.length() > 0) System.out.println("Reference Number: " + refNumber);
+        else System.out.println("Reference Number: ZZZ");
     }
     // Add the methods here ...
 }
